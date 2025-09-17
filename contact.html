@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>お問い合わせ</title>
+  <link rel="stylesheet" href="style.css"> <!-- 共通CSSを使うなら -->
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+     <header>
+    <div class="container header-inner">
+      <h1 class="logo">
+        <img src="images/RNロゴ背景白.svg" alt="〇〇断熱板金 ロゴ" />株式会社RN板金工業
+      </h1>
+
+      <!-- ハンバーガーメニュー -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="photos.html">ギャラリー</a></li>
+          <li><a href="index.html#services">サービス</a></li>
+          <li><a href="index.html#about">会社概要</a></li>
+          <li><a href="index.html#map">アクセス</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>お問い合わせ</h2>
+        <p>ご相談・お見積もりは無料です。お気軽に下記フォームよりお問い合わせください。経験豊富なスタッフが迅速に対応いたします。</p>
+
+        <form action="https://formspree.io/f/xandvojb" method="POST" class="contact-form">
+          <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html" />
+          <label for="name">お名前 <span class="required">*</span></label>
+          <input type="text" id="name" name="name" placeholder="山田 太郎" required />
+
+          <label for="email">メールアドレス <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="example@example.com" required />
+
+          <label for="phone">電話番号</label>
+          <input type="tel" id="phone" name="phone" placeholder="080-1234-5678" />
+
+          <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+          <textarea id="message" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください。" required></textarea>
+
+          <button type="submit" class="btn btn-primary">送信する</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+    <div class="container">
+      <p>&copy; 2025 株式会社RN板金工業. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+    // ハンバーガーメニューのトグル機能
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');  // 'active' クラスを切り替え、メニューの表示を切り替える
+    });
+  </script>
+
+</body>
+</html>

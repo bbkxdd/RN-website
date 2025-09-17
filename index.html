@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社RN板金工業 | トップページ</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <h1 class="logo">
+        <img src="images/RNロゴ背景白.svg" alt="〇〇断熱板金 ロゴ" />
+        <a href="index.html" class="active">株式会社RN板金工業</a>
+      </h1>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="photos.html">ギャラリー</a></li>
+          <li><a href="index.html#services">サービス</a></li>
+          <li><a href="index.html#about">会社概要</a></li>
+          <li><a href="index.html#map">アクセス</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="hero">
+      <div class="hero-background"></div> <!-- 背景は container の外 -->
+
+      <div class="container hero-content">
+        <h2><span>地域トップクラスの断熱・板金工事サービス</span></h2>
+        <p>長崎県を拠点に、船舶・工場・商業施設等幅広く対応。環境に優しく、省エネ効果の高い断熱工事と、耐久性に優れた板金工事を通じて、快適な空間づくりをお約束します。</p>
+        <a href="contact.html" class="btn btn-primary">📩 無料相談・お見積もりはこちら</a>
+      </div>
+    </section>
+
+
+
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">サービス内容</h2>
+        <section class="alt-section">
+          <!-- 1. 断熱工事 -->
+          <div class="alt-container">
+            <div class="alt-image slide-left">
+              <img src="images/断熱工事.jpg" alt="断熱工事">
+            </div>
+            <div class="alt-text">
+              <a href="photos.html">
+                <h2>断熱工事</h2>
+              </a>
+              <p>配管やダクトに断熱材を施し、熱損失や結露を防ぎます。エネルギー効率の向上に大きく貢献する重要な工事です。</p>
+            </div>
+          </div>
+
+          <!-- 2. 板金工事 -->
+          <div class="alt-container reverse">
+            <div class="alt-image slide-right">
+              <img src="images/板金工事.jpg" alt="板金工事">
+            </div>
+            <div class="alt-text">
+              <a href="photos.html">
+                <h2>板金工事</h2>
+              </a>
+              <p>建築物の外装や屋根に使用される金属板を加工・施工します。美しさと耐久性を両立する職人技が光ります。</p>
+            </div>
+          </div>
+
+          <!-- 3. 保温・保冷工事 -->
+          <div class="alt-container">
+            <div class="alt-image slide-left">
+              <img src="images/保温・保冷工事.jpg" alt="保温・保冷工事">
+            </div>
+            <div class="alt-text">
+              <a href="photos.html">
+                <h2>保温・保冷工事</h2>
+              </a>
+              <p>設備や配管に適した断熱材を選定し、温度管理を最適化。安全性と省エネ性能を高めるために欠かせません。</p>
+            </div>
+          </div>
+
+          <!-- 4. 彫金 -->
+          <div class="alt-container reverse">
+            <div class="alt-image slide-right">
+              <img src="images/彫金作品.jpg" alt="彫金作品">
+            </div>
+            <div class="alt-text">
+              <a href="photos.html">
+                <h2>彫金</h2>
+              </a>
+              <p>金属に模様や装飾を施す伝統技術。職人の手による緻密な作業で、唯一無二の美しい作品が生まれます。</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll('.alt-image img');
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            // 画面に入ったときにアニメーション
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            } else {
+              // 画面外に出たときに非表示に戻す
+              entry.target.classList.remove('visible');
+            }
+          });
+        }, {
+          threshold: 0.4 // 30%が画面内に入ったらアニメーション開始
+        });
+
+        images.forEach(img => observer.observe(img));
+      });
+
+    </script>
+
+
+
+
+
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">会社概要</h2>
+        <div class="company-info">
+          <div class="info-item">
+            <strong>会社名:</strong> 株式会社RN板金工業
+          </div>
+          <div class="info-item">
+            <strong>所在地:</strong> 長崎県長崎市鳴見町268-7
+          </div>
+          <div class="info-item">
+            <strong>代表者:</strong> 平松 祥太郎
+          </div>
+          <div class="info-item">
+            <strong>設　立:</strong> 2019年1月9日
+          </div>
+          <div class="info-item">
+            <strong>事業内容:</strong> 断熱工事、板金工事、保温・保冷施工、彫金
+          </div>
+          <div class="info-item">
+            <strong>対応地域:</strong> 長崎県内を中心に九州全域
+          </div>
+        </div>
+        <p class="company-description">私たちは技術力と信頼を基盤に、お客様のあらゆるニーズに対応。施工後のアフターケアも万全にサポートいたします。</p>
+      </div>
+    </section>
+
+
+    <section id="map" class="map">
+      <div class="container">
+        <h2 class="section-title">アクセスマップ</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4750.845392716212!2d129.8105628191417!3d32.81036517392132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356ab3000af55e61%3A0xbd5d581125895052!2z77yI5qCq77yJUk7mnb_ph5Hlt6Xmpa0!5e1!3m2!1sja!2sjp!4v1757389303866!5m2!1sja!2sjp"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 株式会社RN板金工業. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loading");
+      loader.classList.add("loaded");
+    });
+  </script>
+
+  <button id="scrollToTopBtn" title="トップに戻る">▲</button>
+
+  <script>
+    // スクロールで表示
+    window.addEventListener("scroll", function () {
+      const btn = document.getElementById("scrollToTopBtn");
+      if (window.scrollY > 300) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    });
+
+    // ボタンクリックで上に戻る
+    document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+  <script>
+    const heroSection = document.querySelector('.hero-background');
+    const bgImages = [
+      'images/hero1.jpg',
+      'images/hero2.jpg',
+    ];
+
+    let current = 0;
+
+    function changeBackground() {
+      // 背景をフェードアウト
+      heroSection.classList.add('fade');
+
+      // 1秒後に背景を変更して拡大縮小
+      setTimeout(() => {
+        current = (current + 1) % bgImages.length;  // 次の画像へ
+        heroSection.style.backgroundImage = `
+      linear-gradient(rgba(0, 64, 128, 0.3), rgba(0, 64, 128, 0.8)), url('${bgImages[current]}')`;  // グラデーションと画像を設定
+
+        // フェードインして縮小
+        heroSection.classList.remove('fade');
+      }, 1000);  // 1秒後に背景を変更
+    }
+
+    // 背景画像を5秒ごとに切り替え
+    setInterval(changeBackground, 4000);
+
+  </script>
+
+  <script>
+    // ハンバーガーメニューのトグル機能
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');  // 'active' クラスを切り替え、メニューの表示を切り替える
+    });
+  </script>
+
+
+</body>
+
+</html>
